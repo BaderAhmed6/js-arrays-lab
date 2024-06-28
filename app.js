@@ -141,7 +141,7 @@ console.log('Exercise 10 result:', hasSoup);
 
 
 
-// I COUNDT DO THE LAST 5 EXAMPLES :(
+
 
 /*
 Exercise 11: Odd numbers from an array
@@ -156,6 +156,12 @@ Complete Exercise 11 in the space below:
 */
 
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
+const odds = [];
+nums.forEach(num => {
+   if (num % 2 !== 0) {
+       odds.push(num);
+   }
+});
 
 
 
@@ -179,7 +185,21 @@ Exercise 12: FizzBuzz with arrays
 
 Complete Exercise 12 in the space below:
 */
+let fizz = [];
+let buzz = [];
+let fizzbuzz = [];
 
+
+for (let i=0; i < nums.length; i++){
+    
+    if (nums[i] % 3 === 0 && nums[i] % 5 === 0) {
+        fizzbuzz.push(nums[i]); 
+    }  if (nums[i] % 3 === 0) {
+        fizz.push(nums[i]); 
+    }  if (nums[i] % 5 === 0) {
+        buzz.push(nums[i]); 
+    }
+};
 
 
 console.log('Exercise 12 Results:');
@@ -206,6 +226,7 @@ const numArrays = [
 	[7, 81, 90]
 ];
 
+const numList = numArrays[numArrays.length - 1]
 console.log('Exercise 13 result:', numList);
 
 /*
@@ -219,9 +240,9 @@ Exercise 14: Accessing within nested arrays
 Complete Exercise 14 in the space below:
 */
 
+const num = numArrays [2][1]
 
-
-console.log('Exercise 14 result:', num);
+ console.log('Exercise 14 result:', num);
 /*
 Exercise 15: Nested array sum
 
@@ -234,7 +255,13 @@ Hint: Be sure to declare and initialize the total variable before the iterations
 
 Complete Exercise 15 in the space below:
 */
+let total = 0;
 
+for (let i = 0; i < numArrays.length; i++){
+   for(let j = 0; j < numArrays[i].length; j++){
+total = total +numArrays[i][j]
+   }
+}
 
 
 console.log('Exercise 15 result:\n', total);
